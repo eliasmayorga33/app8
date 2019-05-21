@@ -5,14 +5,14 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	
 });
 
-function onDeviceReady(){
+     function onDeviceReady(){
 	
 	$('#posicion').on('click',function(){
 		getPosition ();
 	});
 }
 
-function getPosition(){
+    function getPosition(){
 	var options={
 		enableHighAccuracy:true,
 		maximumAge:3600000
