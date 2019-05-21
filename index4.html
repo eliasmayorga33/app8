@@ -10,7 +10,7 @@
 <script type="text/javascript">
 if(navigator.geolocation){
 	navigator.geolocation.getCurrentPosition(mostrarUbicacion);
-}else{alert("¡Error!Este navegador no soporta la Geolocalizació:");}
+}else{alert("¡Error!Este navegador no soporta la Geolocalización.");}
 function refrescarUbicacion(){
 	navigator.geolocation.watchPosition(mostrarUbicacion);}
 	</script>
@@ -29,7 +29,7 @@ function cargarmap(){
 	{
 		lat=position.coords.latitude;
 		lon=position.coords.longitude;
-		latlon=new google.maps.Latlng(lat,lon)
+		latlon=new google.maps.LatLng(lat,lon)
 		mapholder =document.getElementById('mapholder')
 		mapholder.style.height ='500px';
 		mapholder.style.width ='750px';
@@ -39,7 +39,7 @@ function cargarmap(){
 		mapTypeControl :false,
 		navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
 		};
-		var map=new google.mapsMap(document.getElementById("mapholder"),myOptions);
+		var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
 		var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
 	}
 	function showError(error)
